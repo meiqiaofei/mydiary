@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">diary</string>
+    <string name="line">/</string>
+    <string name="space"> </string>
+    <string name="time_button">Time</string>
+    <string name="save_button">DONE </string>
+
+</resources>

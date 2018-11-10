@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 布局颜色要跟listview边框颜色相同 -->
+    <!-- 上左右留白使其不紧贴屏幕 -->
+
+    <ListView
+        android:id="@+id/activity_main_diary_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <!-- 取消分割线divider和滚动条scrollbars -->
+
+    <RelativeLayout
+        style="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <!-- 用relativelayout将一个按钮定位在中间，其他控件围绕它 -->
+
+        <ImageButton
+            android:id="@+id/activity_main_create_button"
+            style="none"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/space"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/new_button" />
+
+        <!-- 设置此按钮在中间，其他控件围绕它 -->
+        <!-- padding留白使图形不至于紧贴按钮显示得太大 -->
+        <!-- android:contentDescription属性设置停留在图片时显示的文字内容 -->
+
+        <ImageView
+            android:id="@+id/activity_main_second_split_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/activity_main_create_button"
+            android:contentDescription="@string/space"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_vertical" />
+
+        <Button
+            android:id="@+id/activity_main_year_button"
+            style="none"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/activity_main_second_split_line"
+            android:background="@android:color/transparent"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/activity_main_first_split_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/activity_main_year_button"
+            android:contentDescription="@string/space"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_vertical" />
+
+        <Button
+            android:id="@+id/activity_main_month_button"
+            style="none"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/activity_main_first_split_line"
+            android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/activity_main_fouth_split_line"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/activity_main_month_button"
+            android:contentDescription="@string/space"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_vertical" />
+
+        <ImageView
+            android:id="@+id/activity_main_third_split_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/activity_main_create_button"
+            android:contentDescription="@string/space"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_vertical" />
+
+        <ImageButton
+            android:id="@+id/activity_main_view_button"
+            style="none"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dip"
+            android:layout_toRightOf="@id/activity_main_third_split_line"
+            android:contentDescription="@string/space"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@drawable/view_button" />
+
+        <ImageView
+            android:id="@+id/activity_main_forth_split_line"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dip"
+            android:layout_toRightOf="@id/activity_main_view_button"
+            android:contentDescription="@string/space"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_vertical" />
+
+    </RelativeLayout>
+
+</LinearLayout>
